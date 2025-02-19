@@ -27,8 +27,6 @@ resource "aws_instance" "tf_ec2_instance" {
     echo "TABLE_NAME=users" | sudo tee -a .env
     echo "PORT=3000" | sudo tee -a .env
 
-    # Set correct permissions for .env
-    sudo chmod 600 .env
 
     # Install Node.js dependencies
     sudo npm install
